@@ -1,0 +1,6 @@
+/.vs
+/node_modules
+/*.json
+/*.js
+/*.d.ts
+/*.tsbuildinfo
