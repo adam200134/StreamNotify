@@ -7,3 +7,5 @@
 # OR You can enter StreamNotify.exe in console window
 
 <img src="https://github.com/adam200134/StreamNotify/blob/main/console.png" alt="Aleq"/>
+
+<img src="https://github.com/adam200134/StreamNotify/blob/main/Embed.png" alt="Aleq"/>
