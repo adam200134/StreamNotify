@@ -1,5 +1,5 @@
 # StreamNotify
 
-<img src="/uploads/media/default/0001/01/25acddb3da54207bc6beb5838f65f022feaa81d7.jpeg" alt="Aleq" width="200" height="185"/>
+<img src="https://github.com/adam200134/StreamNotify/blob/main/DD.png" alt="Aleq" width="128" height="128"/>
 
 double click StreamNotify.exe
