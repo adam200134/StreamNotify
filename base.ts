@@ -52,7 +52,7 @@ export class Config {
         if (typeof config.Timer == 'string' && config.Timer != "") this.Timer = config.Timer
         if (Array.isArray(config.Data) && config.Data.length > 0) this.Data = config.Data
         if (config.tip) {
-            Log.tip(`在 ${process.cwd()}/${file} :`)
+            Log.tip(`在 ${process.cwd()}\\${file} :`)
             Log.tip(` - 將tip的值改為 false 關閉提示`)
             Log.tip(` - 將schedules的值改為 true 啟用時間表`)
             Log.log(` - 可在Data中新增 {channelId:"YT頻道ID"} `.cyan + `(只有DD才用的到這功能)`.cyan.strikethrough)
