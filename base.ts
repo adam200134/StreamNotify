@@ -84,23 +84,27 @@ export interface VideoData {
 export const file = 'config.json'
 export const config = new Config()
 
-export function sendLiveEmbed(row: YTData, statusLable: string, timeLable: string, uid?: string | number) {
+export function sendLiveEmbed(row: YTData, i: number, statusLable: string, timeLable: string, uid?: string | number) {
     const url = 'https://www.youtube.com/watch?v=' + row.videoId
     Log.info('頻道' + row.author + '更新狀態 : ' + statusLable)
     Log.info('標題 : ' + row.title)
     Log.info('網址 : ' + url)
-    hookedit(row)?.then(x => {
-        var eb = [new EmbedBuilder().setTitle(`${row.title}`).setURL(url).setColor('Red')
-            .addFields({ name: `${row.author}`, value: `[Link](https://www.youtube.com/channel/${row.channelId})`, inline: true })
-            .addFields({ name: `目前狀態`, value: `${statusLable}`, inline: true })
-            .addFields({ name: `${timeLable}`, value: `<t:${row.startTime}:F>(<t:${row.startTime}:R>)` })
-            .setImage(`https://i.ytimg.com/vi/${row.videoId}/maxresdefault.jpg`)]
-        if (typeof uid == 'string' && uid != "") x.send({ content: `<@${uid}>`, embeds: eb })
+    config.Data[i] = row
+    writeFileSync(file, JSON.stringify(config, null, 4), 'utf-8')
+    if (row.webhookUrl == '' || !row.webhookUrl.startsWith('https://discord.com/api/webhooks')) return
+    const hook = new WebhookClient({ url: row.webhookUrl })
+    if (!hook) return
+    var eb = [new EmbedBuilder().setTitle(`${row.title}`).setURL(url).setColor('Red')
+        .addFields({ name: `${row.author}`, value: `[Link](https://www.youtube.com/channel/${row.channelId})`, inline: true })
+        .addFields({ name: `目前狀態`, value: `${statusLable}`, inline: true })
+        .addFields({ name: `${timeLable}`, value: `<t:${row.startTime}:F>(<t:${row.startTime}:R>)` })
+        .setImage(`https://i.ytimg.com/vi/${row.videoId}/maxresdefault.jpg`)]
+    typeof uid == 'string' && uid != "" ? hook.send({ content: `<@${uid}>`, embeds: eb }) : hook.send({ embeds: eb })
 
-    })
 }
+
 export function hookedit(row: YTData) {
     if (row.webhookUrl == '' || !row.webhookUrl.startsWith('https://discord.com/api/webhooks')) return
     const hook = new WebhookClient({ url: row.webhookUrl })
-    return hook.edit({ name: row.author, avatar: row.avatar })
+    if (hook) hook.edit({ name: row.author, avatar: row.avatar })
 }
