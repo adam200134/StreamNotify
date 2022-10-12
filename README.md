@@ -17,6 +17,6 @@ Download and double click [StreamNotify.exe](https://github.com/adam200134/Strea
 
 OR You can enter StreamNotify.exe in console
 
-<img src="https://github.com/adam200134/StreamNotify/blob/main/console.png" alt="Aleq"/>
+<img src="https://github.com/adam200134/StreamNotify/blob/main/console.png" width="128" height="128" alt="Aleq"/>
 
-<img src="https://github.com/adam200134/StreamNotify/blob/main/Embed.png" alt="Aleq"/>
+<img src="https://github.com/adam200134/StreamNotify/blob/main/Embed.png" width="128" height="128" alt="Aleq"/>
