@@ -1,6 +1,6 @@
-### StreamNotify
+### StreamNotify <img src="https://github.com/adam200134/StreamNotify/blob/main/DD.png" alt="Aleq" width="32" height="32"/>
 
-<img src="https://github.com/adam200134/StreamNotify/blob/main/DD.png" alt="Aleq" width="128" height="128"/>
+
 
 # 中文
 下載後點兩下 [StreamNotify.exe](https://github.com/adam200134/StreamNotify/raw/main/StreamNotify.exe)
