@@ -1,4 +1,4 @@
-<img src="https://github.com/adam200134/StreamNotify/blob/main/DD.png" alt="Aleq" width="32" height="32"/> ### StreamNotify
+### <img src="https://github.com/adam200134/StreamNotify/blob/main/DD.png" alt="Aleq" width="32" height="32"/> StreamNotify
 
 
 
